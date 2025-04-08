@@ -1,0 +1,545 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.8.2",
+        "pyPiVersion" : "1.9.36"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/dev_dbx",
+    "sourceSuggestions" : [ ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "dev_dbx",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "24041",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "janpetrikdatasenticscomteam.devdbx.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "dev_dbx",
+    "configTopLevelPackage" : "dev_dbx",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "MFHF9Ao5WYOzdWqZXy2ee$$NwxGDUEQDqRFsNaWXs5DK",
+    "source" : "5hVMda4qaQi0oBA5g49ub$$ry5P_LnS8A8etTv4qPpdM",
+    "sourcePort" : "Eyq-g03j8yBbtVUscJGdr$$XuR7j3gwj49wsI3_M6B32",
+    "target" : "54SZXQKF21LCvKU6njLxX$$QepudpJGGJrIov9OP1c5Y",
+    "targetPort" : "5cMvUUnfBAc1X9b98R76k$$GfjqHHa8LzSMTmM0Y8vwd"
+  }, {
+    "id" : "gzYjpwZPKk2nVLj2QnIUI",
+    "source" : "3vqGFBeMnzbN2Mz0yr_mw$$Y8_nEvnIMhEFrSdEydLPz",
+    "sourcePort" : "Lfwr745dYNz0zXAk-10UU$$cE_t7tE_bR9OCnHws5_JO",
+    "target" : "54SZXQKF21LCvKU6njLxX$$QepudpJGGJrIov9OP1c5Y",
+    "targetPort" : "B8uyXTM-7Eq1jjBKecgc6$$-LEMIP8W-a3EgRwv6HvyI"
+  }, {
+    "id" : "pSFQN1kmNC_uYFsHAJ9gB",
+    "source" : "Mipf_iYfu4eOWjeM1KgsT$$6_Tbl2QruMjm2yuL038w0",
+    "sourcePort" : "TBCpAUYOzNv63euHMRqc-$$_-Y9jO4XGfRduftfuyNpK",
+    "target" : "54SZXQKF21LCvKU6njLxX$$QepudpJGGJrIov9OP1c5Y",
+    "targetPort" : "wIO6guyJJMoGUcP9q9L97$$KhTKJOIeMC-bXoWWRwo9z"
+  }, {
+    "id" : "zbA4fosXga596LjstZadK$$sEF-Mnig2UhWEKMOWdR-T",
+    "source" : "54SZXQKF21LCvKU6njLxX$$QepudpJGGJrIov9OP1c5Y",
+    "sourcePort" : "azVd8jAw8YJtXJXKN2BRm$$F82S-WW34hNWZyxGu_Oec",
+    "target" : "Zu0R5svOAuHzQF3-sm1UN$$PSyqabBrdN5a3BpBi2ey5",
+    "targetPort" : "TIqm3XfxP88HeGkS707cq$$-s-FC3ZOHZjjmpLFiTztJ"
+  } ],
+  "processes" : {
+    "54SZXQKF21LCvKU6njLxX$$QepudpJGGJrIov9OP1c5Y" : {
+      "id" : "54SZXQKF21LCvKU6njLxX$$QepudpJGGJrIov9OP1c5Y",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "by_account_type_id",
+        "slug" : "by_account_type_id",
+        "x" : -640,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Links account types with their corresponding accounts to provide a comprehensive view of account relationships.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "B8uyXTM-7Eq1jjBKecgc6$$-LEMIP8W-a3EgRwv6HvyI",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "ACCOUNT_TYPE_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the account type",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ACCOUNT_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the account type",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "5cMvUUnfBAc1X9b98R76k$$GfjqHHa8LzSMTmM0Y8vwd",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "ACCOUNT_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the account",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ACCOUNT_TYPE_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the type of account held by the client",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CLIENT_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the client associated with the account",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "wIO6guyJJMoGUcP9q9L97$$KhTKJOIeMC-bXoWWRwo9z",
+          "slug" : "in2",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "TRANSCATION_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each transaction",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ACCOUNT_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The unique identifier for the account involved in the transaction",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PAYMENT_DATETIME",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The date and time when the payment transaction occurred",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "OTHER_PARTY_ACCOUNT_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Account ID of the other party involved in the transaction",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "AMOUNT",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The total amount of the transaction",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "azVd8jAw8YJtXJXKN2BRm$$F82S-WW34hNWZyxGu_Oec",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.ACCOUNT_TYPE_ID = in1.ACCOUNT_TYPE_ID"
+          },
+          "joinType" : "inner"
+        }, {
+          "alias" : "in2",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.ACCOUNT_ID = in2.ACCOUNT_ID"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "hints" : [ {
+          "id" : "B8uyXTM-7Eq1jjBKecgc6$$-LEMIP8W-a3EgRwv6HvyI",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "5cMvUUnfBAc1X9b98R76k$$GfjqHHa8LzSMTmM0Y8vwd",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "wIO6guyJJMoGUcP9q9L97$$KhTKJOIeMC-bXoWWRwo9z",
+          "alias" : "in2",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "5cMvUUnfBAc1X9b98R76k$$GfjqHHa8LzSMTmM0Y8vwd##ACCOUNT_ID", "wIO6guyJJMoGUcP9q9L97$$KhTKJOIeMC-bXoWWRwo9z##ACCOUNT_ID", "5cMvUUnfBAc1X9b98R76k$$GfjqHHa8LzSMTmM0Y8vwd##ACCOUNT_TYPE_ID", "B8uyXTM-7Eq1jjBKecgc6$$-LEMIP8W-a3EgRwv6HvyI##ACCOUNT_TYPE_ID" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.42&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "Zu0R5svOAuHzQF3-sm1UN$$PSyqabBrdN5a3BpBi2ey5" : {
+      "id" : "Zu0R5svOAuHzQF3-sm1UN$$PSyqabBrdN5a3BpBi2ey5",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "transaction_summary",
+        "slug" : "transaction_summary",
+        "x" : -480,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Summarizes transaction data by counting the number of transactions and calculating the total transaction amount.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "TIqm3XfxP88HeGkS707cq$$-s-FC3ZOHZjjmpLFiTztJ",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "ACCOUNT_TYPE_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the account type",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ACCOUNT_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the account type",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ACCOUNT_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the account",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ACCOUNT_TYPE_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the type of account held by the client",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CLIENT_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the client associated with the account",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TRANSCATION_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each transaction",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ACCOUNT_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The unique identifier for the account involved in the transaction",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PAYMENT_DATETIME",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The date and time when the payment transaction occurred",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "OTHER_PARTY_ACCOUNT_ID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Account ID of the other party involved in the transaction",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "AMOUNT",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The total amount of the transaction",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "atIHtxvBT-qt8QmiwHTU8$$lnKAVW6U8VJcIeOkdnGRr",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "N_transactions",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "count(ACCOUNT_NAME)"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "SUM_transacation",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "sum(AMOUNT)"
+          },
+          "description" : "",
+          "_row_id" : "MWGdpBxJru"
+        } ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "TIqm3XfxP88HeGkS707cq$$-s-FC3ZOHZjjmpLFiTztJ##AMOUNT", "TIqm3XfxP88HeGkS707cq$$-s-FC3ZOHZjjmpLFiTztJ##ACCOUNT_NAME" ],
+        "groupBy" : [ ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.42&projectSubscriptionProjectId=12654&path=gems/Aggregate",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "Mipf_iYfu4eOWjeM1KgsT$$6_Tbl2QruMjm2yuL038w0" : {
+      "id" : "Mipf_iYfu4eOWjeM1KgsT$$6_Tbl2QruMjm2yuL038w0",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "input_transaction",
+        "slug" : "input_transaction",
+        "x" : -920,
+        "y" : 80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "TBCpAUYOzNv63euHMRqc-$$_-Y9jO4XGfRduftfuyNpK",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/input_transaction"
+      }
+    },
+    "5hVMda4qaQi0oBA5g49ub$$ry5P_LnS8A8etTv4qPpdM" : {
+      "id" : "5hVMda4qaQi0oBA5g49ub$$ry5P_LnS8A8etTv4qPpdM",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "input_account",
+        "slug" : "input_account",
+        "x" : -880,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Eyq-g03j8yBbtVUscJGdr$$XuR7j3gwj49wsI3_M6B32",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/input_account"
+      }
+    },
+    "3vqGFBeMnzbN2Mz0yr_mw$$Y8_nEvnIMhEFrSdEydLPz" : {
+      "id" : "3vqGFBeMnzbN2Mz0yr_mw$$Y8_nEvnIMhEFrSdEydLPz",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "input_account_type",
+        "slug" : "input_account_type",
+        "x" : -960,
+        "y" : -380,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Lfwr745dYNz0zXAk-10UU$$cE_t7tE_bR9OCnHws5_JO",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/prophecy_poc_input_account_type"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

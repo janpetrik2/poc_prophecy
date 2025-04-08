@@ -1,0 +1,39 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: TRANSCATION_ID
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for each transaction
+      mappings: []
+      tags: []
+  - name: ACCOUNT_ID
+    type: string
+    nullable: true
+    metadata:
+      description: The unique identifier for the account involved in the transaction
+      mappings: []
+      tags: []
+  - name: PAYMENT_DATETIME
+    type: timestamp
+    nullable: true
+    metadata:
+      description: The date and time when the payment transaction occurred
+      mappings: []
+      tags: []
+  - name: OTHER_PARTY_ACCOUNT_ID
+    type: string
+    nullable: true
+    metadata:
+      description: Account ID of the other party involved in the transaction
+      mappings: []
+      tags: []
+  - name: AMOUNT
+    type: double
+    nullable: true
+    metadata:
+      description: The total amount of the transaction
+      mappings: []
+      tags: []

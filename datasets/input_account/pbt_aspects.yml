@@ -1,0 +1,25 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: ACCOUNT_ID
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for the account
+      mappings: []
+      tags: []
+  - name: ACCOUNT_TYPE_ID
+    type: string
+    nullable: true
+    metadata:
+      description: Identifier for the type of account held by the client
+      mappings: []
+      tags: []
+  - name: CLIENT_ID
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for the client associated with the account
+      mappings: []
+      tags: []
