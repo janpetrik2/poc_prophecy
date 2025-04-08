@@ -110,6 +110,12 @@
     "sourcePort" : "azVd8jAw8YJtXJXKN2BRm$$F82S-WW34hNWZyxGu_Oec",
     "target" : "Zu0R5svOAuHzQF3-sm1UN$$PSyqabBrdN5a3BpBi2ey5",
     "targetPort" : "TIqm3XfxP88HeGkS707cq$$-s-FC3ZOHZjjmpLFiTztJ"
+  }, {
+    "id" : "-K4CueVDYlOeRFF0f7m8m$$K-feDP75tDlNlYtUyrwwB",
+    "source" : "Zu0R5svOAuHzQF3-sm1UN$$PSyqabBrdN5a3BpBi2ey5",
+    "sourcePort" : "atIHtxvBT-qt8QmiwHTU8$$lnKAVW6U8VJcIeOkdnGRr",
+    "target" : "_Ij7AEfs5u54Q9lFUt7mG$$DIIFIEplAQtuet43w6Kqi",
+    "targetPort" : "nJ1hfPMMAnm2pZFJrVzLx$$f_IkG48vZFQ4EY9ff8tgt"
   } ],
   "processes" : {
     "54SZXQKF21LCvKU6njLxX$$QepudpJGGJrIov9OP1c5Y" : {
@@ -309,7 +315,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Summarizes transaction data by counting the number of transactions and calculating the total transaction amount.",
+        "comment" : "Summarizes transaction data by account, providing the total number of transactions and the total amount for each account.",
         "autoUpdateComment" : true,
         "dataPreview" : false
       },
@@ -444,9 +450,17 @@
         "allowSelection" : true,
         "pivotColumn" : null,
         "pivotValues" : [ ],
-        "activeTab" : "aggregate",
-        "columnsSelector" : [ "TIqm3XfxP88HeGkS707cq$$-s-FC3ZOHZjjmpLFiTztJ##AMOUNT", "TIqm3XfxP88HeGkS707cq$$-s-FC3ZOHZjjmpLFiTztJ##ACCOUNT_NAME" ],
-        "groupBy" : [ ]
+        "activeTab" : "groupBy",
+        "columnsSelector" : [ "TIqm3XfxP88HeGkS707cq$$-s-FC3ZOHZjjmpLFiTztJ##ACCOUNT_NAME", "TIqm3XfxP88HeGkS707cq$$-s-FC3ZOHZjjmpLFiTztJ##AMOUNT" ],
+        "groupBy" : [ {
+          "target" : "ACCOUNT_NAME",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "ACCOUNT_NAME"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.42&projectSubscriptionProjectId=12654&path=gems/Aggregate",
@@ -505,6 +519,65 @@
       },
       "properties" : {
         "datasetId" : "datasets/input_account"
+      }
+    },
+    "_Ij7AEfs5u54Q9lFUt7mG$$DIIFIEplAQtuet43w6Kqi" : {
+      "id" : "_Ij7AEfs5u54Q9lFUt7mG$$DIIFIEplAQtuet43w6Kqi",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "out_agg_transaction",
+        "slug" : "out_agg_transaction",
+        "x" : -320,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "nJ1hfPMMAnm2pZFJrVzLx$$f_IkG48vZFQ4EY9ff8tgt",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "ACCOUNT_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the account type",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "N_transactions",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SUM_transacation",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/out_agg_transaction"
       }
     },
     "3vqGFBeMnzbN2Mz0yr_mw$$Y8_nEvnIMhEFrSdEydLPz" : {

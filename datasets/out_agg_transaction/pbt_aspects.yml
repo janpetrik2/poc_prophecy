@@ -1,0 +1,25 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: ACCOUNT_NAME
+    type: string
+    nullable: true
+    metadata:
+      description: The name of the account type
+      mappings: []
+      tags: []
+  - name: N_transactions
+    type: long
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SUM_transacation
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

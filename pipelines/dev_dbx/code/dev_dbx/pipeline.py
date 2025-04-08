@@ -12,6 +12,7 @@ def pipeline(spark: SparkSession) -> None:
     df_input_transaction = input_transaction(spark)
     df_by_account_type_id = by_account_type_id(spark, df_input_account_type, df_input_account, df_input_transaction)
     df_transaction_summary = transaction_summary(spark, df_by_account_type_id)
+    out_agg_transaction(spark, df_transaction_summary)
 
 def main():
     spark = SparkSession.builder.enableHiveSupport().appName("dev_dbx").getOrCreate()

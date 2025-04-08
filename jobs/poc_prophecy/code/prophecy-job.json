@@ -1,0 +1,103 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "24041",
+    "jobId" : "jobs/poc_prophecy",
+    "name" : "poc_prophecy",
+    "schedule" : "0 30 11 * * ? *",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "scheduleHelp" : "At 11:30 am, every day, every year",
+    "enabled" : true,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    }
+  },
+  "processes" : {
+    "ra7HZOV8Sy7xeqJnDoTnp" : {
+      "id" : "ra7HZOV8Sy7xeqJnDoTnp",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "dev_dbx",
+        "slug" : "dev_dbx",
+        "x" : 100,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "out",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/dev_dbx",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "dev_dbx_python" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        },
+        "projectId" : "44756"
+      },
+      "parent" : "ItsrBLKP1dSIJWg5Tm7iX"
+    },
+    "ItsrBLKP1dSIJWg5Tm7iX" : {
+      "id" : "ItsrBLKP1dSIJWg5Tm7iX",
+      "component" : "Cluster",
+      "metadata" : {
+        "label" : "Cluster_1",
+        "slug" : "Cluster_1",
+        "x" : 0,
+        "y" : 0,
+        "width" : 280,
+        "height" : 280
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ ]
+      },
+      "properties" : {
+        "clusterSize" : "small"
+      }
+    }
+  },
+  "connections" : [ ]
+}
