@@ -450,7 +450,7 @@
         "allowSelection" : true,
         "pivotColumn" : null,
         "pivotValues" : [ ],
-        "activeTab" : "groupBy",
+        "activeTab" : "aggregate",
         "columnsSelector" : [ "TIqm3XfxP88HeGkS707cq$$-s-FC3ZOHZjjmpLFiTztJ##ACCOUNT_NAME", "TIqm3XfxP88HeGkS707cq$$-s-FC3ZOHZjjmpLFiTztJ##AMOUNT" ],
         "groupBy" : [ {
           "target" : "ACCOUNT_NAME",
